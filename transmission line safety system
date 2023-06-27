@@ -1,0 +1,40 @@
+ #define SENSE0 A0 
+#define SENSE1 A1
+#define SENSE4 A4
+#define SENSE5 A5
+
+void setup()
+{
+pinMode(SENSE0, INPUT);
+pinMode(SENSE1, INPUT);
+pinMode(2, OUTPUT);
+pinMode(3, OUTPUT);
+}
+
+
+void loop()
+{
+if(digitalRead(SENSE0))
+{
+ pinMode(2, LOW);
+  delay(10);
+}
+else
+  {
+    digitalWrite(2, HIGH);
+       pinMode(2, HIGH);
+    delay(10);
+  }
+
+  if(digitalRead(SENSE1))
+{
+  pinMode(3, LOW);
+ delay(10);
+}
+else
+  {
+        digitalWrite(3, HIGH);
+     pinMode(3, HIGH);
+  delay(10);
+  }
+}
